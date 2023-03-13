@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Txt math</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo_white.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- NOTIFICATION -->
+    <div class="notification" id="notification_container">
+        <p id="notification_content">Image copier dans le presse papier !</p>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+
+    <!-- CONTENT -->
+    <div class="content" id="content">
+
+        <div class="input-panel">
+            <input tabindex="1" type="text" name="Expression" id="inputExpression" placeholder="5 / U^2">
+            <button tabindex="2" id="convertButton">Go!</button>
+            <div hidden id="input_loading" class="input-loading"></div>
+        </div>
+        
+        <div class="result-panel" id="result_panel">
+            <img id="result" tabindex="-1">
+            <div class="result-panel-buttons">
+                <button id="copy_result"></button>
+                <button id="open_result"></button>
+                <button id="clone_result">✖</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- MOUSE -->
+    <div class="mouse-contener"><div class="mouse"></div></div>
+
+    <!-- HELP -->
+    <section class="help">
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Formules</h1>
+                <p onclick="exempleCopy(this)">x_1 = (-b + sqrt($delta))/2a</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/example1.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Equation</h1>
+                <p>5x+1=0</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/equ.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Définition d'une suite par récurrence</h1>
+                <p>U_(n+1)=U_n*4/2</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/suite_recurrence.svg">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <p>Documentation</p>
+        <h1>Toutes les possibilités</h1>
+
+    </section>
+
+    <!-- TOUTE LES POSSIBILITER -->
+    <section class="docs">
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Indice</h1>
+                <p>U_n</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/u_n.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Puissance</h1>
+                <p>x^2</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/x^2.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Division</h1>
+                <p>(4x + 1) / 2</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc3.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Division > Multiplication</h1>
+                <p>4 * 3 / 2</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc4.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Racine carrée</h1>
+                <p>sqrt(2)</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc5.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Delta</h1>
+                <p>$delta</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc6.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Lambda</h1>
+                <p>$lambda</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc7.svg">
+            </div>
+        </div>
+
+        <div class="help-container">
+            <div class="help-container-left">
+                <h1>Gamma</h1>
+                <p>$gamma</p>
+            </div>
+            <div class="help-container-right">
+                <img src="images/doc8.svg">
+            </div>
+        </div>
+
+    </section>
+        
+    <div class="powered-by">
+        <a title="CodeCogs.com" href="https://www.codecogs.com">
+            <img src="http://www.codecogs.com/images/logo.gif" title="CodeCogs - An Open Source Scientific Library" alt="Powered by CodeCogs">
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© Copyright 2023 - OnimStudio</p>
+        <p>contact.onimstudio@gmail.com</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="app.js"></script>
+
+</body>
+</html>
